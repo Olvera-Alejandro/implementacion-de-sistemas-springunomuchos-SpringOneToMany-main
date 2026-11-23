@@ -1,0 +1,20 @@
+
+En qué tabla queda la llave foránea y qué propiedad de Java la controla?
+
+En la tabla comentarios, en el producto_id y controla la propiedad Comment, producto @ManyToOne 
+
+¿Cuál es la diferencia entre List y Set?
+
+List permite varios repetidos y  no le importa el en si el orden, a diferencia de Set que no permite repetidos y el orden si se mantiene.
+
+¿Por qué los identificadores son String y qué tipo de valor guardan?
+
+Porque guardan los ID 
+
+¿Qué ocurre al eliminar un producto con comentarios asociados? ¿Qué cambia si se quita CascadeType.ALL?
+
+Si los borramos los comentarios asociados tambien se eliminan y por ende Postgres no funcionaria por lo que rechazaria el borrado de llaves foraneas
+
+¿Qué diferencia práctica hay entre los FetchType usados en Product y Comment?
+
+EAGER en Product.comentarios carga los comentarios junto con el producto. LAZY en Comment.producto carga el producto solo cuando se accede a el
